@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章管理</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+</head>
+<body>
+    <!-- 導覽列 -->
+    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+        <div class="ui container">
+            <div class="ui inverted secontary stackable menu">
+                <h2 class="ui teal header item">管理後台</h2>
+                <a href="#" class="active m-item item m-mobile-hide"><i class="mini home icon"></i>&ensp;文章</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini idea icon"></i>&ensp;分類</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>&ensp;標籤</a>
+                <div class="right m-item m-mobile-hide menu">
+                    <div class="ui dropdown item">
+                        <div class="text">
+                            <img src="../static/images/favicon.png" class="ui avatar image">
+                            葉凡君
+                        </div>
+                        <i class="ui dropdown icon"></i>
+                        <div class="menu">
+                            <a href="#" class="item">註銷</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>           
+        </div>
+        <a href="#" class="ui menu toggle black icon button m-top-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+    <!-- 二級導覽列 -->
+    <div class="ui attached pointing menu">
+        <div class="ui container">
+            <div class="right menu">
+                <a href="#" class="item">發布</a>
+                <a href="#" class="teal active item">列表</a>                   
+            </div>
+        </div>
+    </div>
+
+    <!-- 中間內容 -->
+    <div class="m-container-small m-padded-tb-large">
+        <div class="ui container">
+            <form action="#" method="post" class="ui segment form">
+                <div class="inline fields">
+                    <div class="field">
+                        <input type="text" name="title" placeholder="標題">                        
+                    </div>
+                    <div class="field">
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="type">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">分類</div>
+                            <div class="menu">
+                                <div class="item" data-value="1">錯誤文章</div>
+                                <div class="item" data-value="2">編輯文章</div>
+                            </div>
+                        </div>                   
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="recommend">
+                            <label for="recommend">推薦</label>
+                        </div>                        
+                    </div>
+                    <div class="field">
+                        <button class="ui mini teal basic button">
+                            <i class="search icon"></i>搜尋
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <table class="ui celled table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>標題</th>
+                        <th>類型</th>
+                        <th>推薦</th>
+                        <th>更新時間</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>個人最喜歡的電影《哈利波特》系列</td>
+                        <td>電影</td>
+                        <td>是</td>
+                        <td>2022-12-30 09:45</td>
+                        <td>
+                            <a href="#" class="ui mini teal basic button">編輯</a>
+                            <a href="#" class="ui mini red basic button">編輯</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="6">
+                            <div class="ui mini pagination menu">
+                                <a href="#" class="icon item">上一頁</a>
+                                <!-- <a href="#" class="item">1</a>
+                                <a href="#" class="item">2</a>
+                                <a href="#" class="item">3</a>
+                                <a href="#" class="item">4</a> -->
+                                <a href="#" class="icon item">下一頁</a>
+                            </div>
+                            <a href="#" class="ui mini right floated teal basic button">新增</a>
+                
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <!-- 底部 -->
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                      <div class="item">
+                        <img src="../static/images/wechat.jpg" class="ui rounded image" alt="" style="width: 110px;">
+                      </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaces">最新文章</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">使用者故事 (User Story)</a>
+                        <a href="#" class="item">使用者故事 (User Story)</a>
+                        <a href="#" class="item">使用者故事 (User Story)</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaces">聯繫我</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Email : yeahyeah0606@gmail.com</a>
+                        <a href="#" class="item">Instagram : yeah_yeah0606</a>
+
+                    </div>
+                </div>
+                <div class="six wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaces">BLOG</h4>
+                        <p class="m-text-thin m-text-spaces m-opacity-mini">這是我的個人部落格，會分享自己覺得有趣的東西，沒有固定內容</p>
+                        <p class="m-text-thin m-text-spaces m-opacity-mini">主要給自己和朋友看，一切以開心為主...</p>
+                </div>
+                
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaces m-opacity-mini">Copyright 。 2022 - 2023 &nbsp; FanChun &nbsp; Design by FanChun</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+
+    <script>
+        $('.menu.toggle').click(function(){
+            $(".m-item").toggleClass('m-mobile-hide');
+        });
+
+        $('.ui.dropdown').dropdown({
+            on : 'hover'
+        });
+    </script>
+
+</body>
+</html>

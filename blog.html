@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章詳情</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <link rel="stylesheet" href="./static/css/typo.css">
+    <!-- <link rel="stylesheet" href="./static/css/animate.css"> -->
+    <link rel="stylesheet" href="./static/lib/tocbot/tocbot.css">
+    <link rel="stylesheet" href="./static/css/me.css">
+</head>
+<body>
+    <!-- 導覽列 -->
+    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+        <div class="ui container">
+            <div class="ui inverted secontary stackable menu">
+                <h2 class="ui teal header item">Blog</h2>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini home icon"></i>&ensp;首頁</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini idea icon"></i>&ensp;分類</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>&ensp;標籤</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini clone icon"></i>&ensp;歸檔</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="mini info icon"></i>&ensp;關於我</a>
+                <div class="right m-item item  m-mobile-hide">
+                    <div class="ui icon inverted transparent input">
+                        <input type="text" placeholder="Search...">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+            </div>           
+        </div>
+        <a href="#" class="ui menu toggle black icon button m-top-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+
+    <!-- 中間內容 -->
+    <div class="m-container-small m-padded-tb-large">
+        <div class="ui container">
+            <div class="ui top attached segment">
+                <div class="ui horizontal link list">
+                    <div class="item">
+                        <img src="https://upload.cc/i1/2023/02/19/0bmK9t.png" alt="頭像" 
+                            class="ui avatar image">
+                        <div class="content"><a href="#" class="header">葉凡君</a></div>
+                    </div>
+                    <div class="item">
+                        <i class="calendar alternate outline icon"></i> 2023-01-30
+                    </div>
+                    <div class="item">
+                        瀏覽 :  <i class="eye icon"></i> 123
+                    </div>
+                </div>
+            </div>
+            <div class="ui attached segment">
+                <!-- 圖片區域 -->
+                <img src="https://upload.cc/i1/2023/02/19/s0zo1T.jpg" alt="Harry Potter" class="ui fluid rounded image">
+            </div>
+            <div class="ui attached padded segment">
+                <!-- 內容 -->
+                <div class="ui right aligned basic segment">
+                    <div class="ui orange basic label">原創</div>                    
+                </div>
+
+                <h2 class="ui center aligned header">個人最喜歡的電影《哈利波特》系列</h2>
+                <div id="content"  class="typo typo-selection js-toc-content m-padded-lr-responsive m-padded-tb-large">
+                    <p>我是個很喜歡看電影、電視劇的人，看過的影片很多，最愛的電影是《哈利波特》系列，</p>
+                    <p>《哈利波特》沒拍電影前就是世界知名的魔法類小說，我也有看完全部小說，作者 J·K·羅琳真的很厲害，
+                        打造了一個格局超大的「魔法社會」！</p>
+                    <hr>
+                    <h3 id="movieOne">電影簡介</h3>
+                    <p>哈利在 11 歲時進入霍格華茲就讀，也遇到了好朋友榮恩與妙麗，三人組成了鐵三角友情共同經歷了一連串的奇幻魔法事件。</p>
+                    <h4 id="movieAll">全系列作品</h4>
+                    <ul>
+                    <li>2001 年 哈利波特：神秘的魔法石</li>
+                    <li>2002 年 哈利波特：消失的密室</li>
+                    <li>2004 年 哈利波特：阿茲卡班的逃犯</li>
+                    <li>2005 年 哈利波特：火盃的考驗</li>
+                    <li>2007 年 哈利波特：鳳凰會的密令</li>
+                    <li>2009 年 哈利波特：混血王子的背叛</li>
+                    <li>2010 年 哈利波特－死神的聖物 1</li>
+                    <li>2011 年 哈利波特－死神的聖物 2</li>
+                    </ul>
+                    <h4 id="movieAll2">周邊消息</h4>
+                    <p>待補充...</p>
+                </div>
+
+                <!-- 標籤 -->
+                <div class="m-padded-lr-responsive">
+                    <div class="ui basic teal left pointing label">電影</div>
+                </div>
+                <!-- 加好友討論 -->
+                <div class="ui center aligned basic segment">
+                    <button id="addFriendButton" class="ui orange basic circular button">加好友討論</button>                   
+                </div>
+                <div class="ui payQR flowing popup transition  hidden">
+                    <div class="ui orange basic label">
+                        <div class="ui images" style="font-size: inherit;">
+                            <div class="image">
+                                <img src="./static/images/wechat.jpg" alt="條碼"
+                                    class="ui rounded bordered image" style="width:120px">
+                                <div>微信</div>
+                            </div>
+                            <div class="image">
+                                <img src="./static/images/line.jpg" alt="條碼"
+                                    class="ui rounded bordered image" style="width:120px">
+                                <div>Line</div>        
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+
+            </div>  
+            <div class="ui attached positive message">
+                <!-- 文章資訊 -->
+                <div class="ui middle aligned grid">
+                    <div class="eleven wide column">
+                        <ul class="list">
+                            <li>作者: 葉凡君 (聯繫作者)</li>
+                            <li>發表時間: 2023-01-30 09:15</li>
+                            <li>版權聲明: 自由轉載-只須註明作者</li>
+                            <li>文章轉載: 請在文末添加此文章引用連結</li>
+                        </ul>
+                    </div>
+                    <div class="five wide column">
+                        <img src="./static/images/wechat.jpg" alt="" 
+                            class="ui rounded bordered image" style="width:120px">
+                    </div>
+                </div>
+            </div>   
+            <div id="comment-container" class="ui botton attached segment">
+                <!-- 留言區域列表 -->
+                <div class="ul teal segment">
+                    <div class="ui threaded comments">
+                        <h3 class="ui dividing header">評論</h3>
+                        <div class="comment">
+                          <a class="avatar">
+                            <img src="https://upload.cc/i1/2023/02/19/0bmK9t.png">
+                          </a>
+                          <div class="content">
+                            <a class="author">Matt</a>
+                            <div class="metadata">
+                              <span class="date">Today at 5:42PM</span>
+                            </div>
+                            <div class="text">
+                              How artistic!
+                            </div>
+                            <div class="actions">
+                              <a class="reply">回覆</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="comment">
+                          <a class="avatar">
+                            <img src="https://upload.cc/i1/2023/02/19/0bmK9t.png">
+                          </a>
+                          <div class="content">
+                            <a class="author">Elliot Fu</a>
+                            <div class="metadata">
+                              <span class="date">Yesterday at 12:30AM</span>
+                            </div>
+                            <div class="text">
+                              <p>This has been very useful for my research. Thanks as well!</p>
+                            </div>
+                            <div class="actions">
+                              <a class="reply">回覆</a>
+                            </div>
+                          </div>
+                          <div class="comments">
+                            <div class="comment">
+                              <a class="avatar">
+                                <img src="https://upload.cc/i1/2023/02/19/0bmK9t.png">
+                              </a>
+                              <div class="content">
+                                <a class="author">Jenny Hess</a>
+                                <div class="metadata">
+                                  <span class="date">Just now</span>
+                                </div>
+                                <div class="text">
+                                  Elliot you are always so right :)
+                                </div>
+                                <div class="actions">
+                                  <a class="reply">回覆</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="comment">
+                          <a class="avatar">
+                            <img src="https://upload.cc/i1/2023/02/19/0bmK9t.png">
+                          </a>
+                          <div class="content">
+                            <a class="author">Joe Henderson</a>
+                            <div class="metadata">
+                              <span class="date">5 days ago</span>
+                            </div>
+                            <div class="text">
+                              Dude, this is awesome. Thanks so much
+                            </div>
+                            <div class="actions">
+                              <a class="reply">回覆</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <p class="ui divider"></p>  <!-- 水平分割線 -->
+
+                <div class="ui form">
+                    <div class="field">
+                        <textarea name="content" placeholder="請輸入評論內容..."></textarea>
+                    </div>
+                    <div class="fields">
+                        <div class="field m-mobile-wide m-margin-bottom-small">
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" name="nickname" placeholder="姓名">                           
+                            </div>
+                        </div>
+                        <div class="field m-mobile-wide m-margin-bottom-small">
+                            <div class="ui left icon input">
+                                <i class="mail icon"></i>
+                                <input type="text" name="email" placeholder="信箱">                                  
+                            </div>
+                        </div>
+                        <div class="field m-mobile-wide m-margin-bottom-small">
+                            <button class="ui teal button m-mobile-wide">
+                                <i class="edit icon"></i> 發布
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>    
+        </div>
+
+    </div>
+
+    <div class="m-padded-tiny m-fixed m-right-bottom">
+        <div class="ui vertical icon buttons">
+            <button type="button" class="ui toc teal button">目錄</button>
+            <a href="#comment-container" class="ui teal button">留言</a>
+            <button class="ui wechat icon button"><i class="weixin icon"></i></button>
+            <div id="toTop-button" class="ui icon button"><i class="chevron up icon"></i></div>
+        </div>
+    </div>
+
+    <div class="ui toc-container flowing popup transition hidden" style="width:250px !important">
+         <ol class="js-toc"></ol>       
+    </div>
+
+    <div id="qrcode" class="ui wechatQR flowing popup hidden" style="width: 130px !important;">
+
+                <!-- <img src="./static/images/wechat.jpg" alt="條碼"
+                    class="ui rounded bordered image" style="width:120px !important"> -->                 
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- 底部 -->
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                      <div class="item">
+                        <img src="./static/images/wechat.jpg" class="ui rounded image" alt="" style="width: 110px;">
+                      </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaces">最新文章</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">使用者故事 (User Story)</a>
+                        <a href="#" class="item">使用者故事 (User Story)</a>
+                        <a href="#" class="item">使用者故事 (User Story)</a>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaces">聯繫我</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Email : yeahyeah0606@gmail.com</a>
+                        <a href="#" class="item">Instagram : yeah_yeah0606</a>
+
+                    </div>
+                </div>
+                <div class="six wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaces">BLOG</h4>
+                        <p class="m-text-thin m-text-spaces m-opacity-mini">這是我的個人部落格，會分享自己覺得有趣的東西，沒有固定內容</p>
+                        <p class="m-text-thin m-text-spaces m-opacity-mini">主要給自己和朋友看，一切以開心為主...</p>
+                </div>
+                
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaces m-opacity-mini">Copyright 。 2022 - 2023 &nbsp; FanChun &nbsp; Design by FanChun</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.3/jquery.scrollTo.min.js"></script>
+    <script src="./static/lib/tocbot/tocbot.min.js"></script>
+    <script src="./static/lib/qrcode/qrcode.min.js"></script>
+
+    <script>
+        $('.menu.toggle').click(function(){
+            $(".m-item").toggleClass('m-mobile-hide');
+        });
+
+        $('#addFriendButton').popup({
+            popup:$('.payQR.popup'),
+            on:'click',
+            position:'bottom center'
+        });
+
+        tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.js-toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.js-toc-content',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3, h4',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+        });
+
+        $('.toc.button').popup({
+            popup:$('.toc-container.popup'),
+            on:'click',
+            position:'left center'
+        });
+
+        $('.wechat').popup({
+            popup:$('.wechatQR.popup'),
+            on:'hover',
+            position:'left center'
+        });
+
+        var qrcode = new QRCode("qrcode", {
+            text: "http://jindo.dev.naver.com/collie",
+            width: 110,
+            height: 110,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+
+        $('#toTop-button').click(function(){
+            $(window).scrollTo(0,500);
+        });
+
+    </script>
+
+</body>
+</html>
